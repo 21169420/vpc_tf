@@ -1,5 +1,11 @@
+
 provider "aws" {
-  region = "ap-south-1"
+region = "ap-south-1"
+access_key = "AKIA6HZPVPGXWQCSAD4Z"
+secret_key = "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"
+}
+
+
 }
 
 locals {
@@ -23,7 +29,7 @@ Name = "${local.staging_env}-subnet"
 }
 
 resource "aws_instance" "three" {
-  ami           = "ami-074dc0a6f6c764218"
+  ami           = "ami-09f7fbc41963e146f"
   instance_type = "t2.medium"
   subnet_id = aws_subnet.two.id
   tags = {
